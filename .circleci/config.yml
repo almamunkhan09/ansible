@@ -16,6 +16,7 @@ jobs:
           command: |
             # install the dependencies needed for your playbook
             apk add --update ansible 
+            apk add openssh-client
       
       - run:
           name: Configure server ec2
