@@ -21,7 +21,7 @@ jobs:
           name: Configure server
           command: |
             export ANSIBLE_HOST_KEY_CHECKING=False
-            ansible-playbook main.yml -i inventory.txt 
+            ansible all -m ping -i inventory.txt 
 
 
 
