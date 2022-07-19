@@ -3,6 +3,6 @@
     - name: create a user
       become: true
       user: 
-        name: almamun
+        name: almamun1
         state: present
       
