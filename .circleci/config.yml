@@ -21,7 +21,7 @@ jobs:
           name: Configure server
           command: |
             export ANSIBLE_HOST_KEY_CHECKING=False
-            ansible main.yml  -i inventory.txt 
+            ansible-playbook main.yml -i inventory.txt 
 
 
 
