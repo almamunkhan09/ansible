@@ -6,16 +6,16 @@ jobs:
   
   configure_infrastructure: 
     docker:
-      - image: alpine/ansible
+      - image: python:3.7-alpine3.11
     steps:
       - checkout
       - add_ssh_keys:
           fingerprints: ["8f:90:84:d4:1e:dd:cc:bd:70:c4:75:1d:91:18:c7:7b"] # You can get this ID in the section where you registered the SSH K
-      #- run:
-       #   name: Install dependencies
-        #  command: |
-         #   # install the dependencies needed for your playbook
-          #  apk add --update ansible 
+      - run:
+          name: Install dependencies
+          command: |
+            # install the dependencies needed for your playbook
+            apk add --update ansible 
       
       - run:
           name: Configure server
